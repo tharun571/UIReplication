@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Movie1"
+
+    android:background="#DCDCDC">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/back"/>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/dehaze"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="Interstellar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/prodreg"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="54dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/viewpager1"
+            android:foregroundGravity="center"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:layout_marginTop="24dp"
+            android:transitionName="imagecard"></androidx.viewpager.widget.ViewPager>
+
+
+        <LinearLayout
+            android:id="@+id/pager_dots1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewpager1"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pager_dots1"
+            android:id="@+id/frame1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:transitionName="infocard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round"
+            android:id="@+id/cardd"
+            android:layout_marginHorizontal="48dp"
+
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="32dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interstellar"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/prodreg"
+                    android:textColor="#6699cc"
+                    android:transitionName="title"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3D"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/prodreg"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/lolm"
+                    android:transitionName="lol"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMDB: 8.6"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/prodbold"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/lolm"
+                    android:textColor="#000"
+                    android:id="@+id/lol1m"
+                    android:transitionName="lol1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sci-Fi, Adventure"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/prodbold"
+                    android:layout_below="@id/lol1m"
+                    android:textColor="#000"
+                    android:id="@+id/lol2m"
+                    android:transitionName="lol2"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg"
+                    android:layout_below="@id/lol2m"
+                    android:id="@+id/buttonm"
+                    android:text="Session Times"
+                    android:fontFamily="@font/prodreg"
+                    android:textColor="#FFF"
+                    android:textSize="12sp"
+                    android:paddingHorizontal="36dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="24dp"/>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/lol2m"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/ic_baseline_share_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In the future, where Earth is becoming uninhabitable, farmer and ex-NASA pilot Cooper is asked to pilot a spacecraft along with a team of researchers to find a new planet for humans."
+                    android:layout_marginVertical="24dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/prodreg"
+                    android:layout_below="@id/buttonm"
+                    android:textColor="#808080"
+                    android:lineSpacingExtra="8dp"
+                    android:transitionName="story"
+
+                    android:id="@+id/storym"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Story"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/prodbold"
+                    android:layout_below="@id/storym"
+                    android:textColor="#000"
+                    android:id="@+id/story1m"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In the future, where Earth is becoming uninhabitable, farmer and ex-NASA pilot Cooper is asked to pilot a spacecraft along with a team of researchers to find a new planet for humans."
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/prodreg"
+                    android:layout_below="@id/story1m"
+                    android:textColor="#808080"
+                    android:lineSpacingExtra="8dp"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/story1m"
+                    android:src="@drawable/transpbg"
+                    />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
